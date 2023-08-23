@@ -1,0 +1,4 @@
+ctrl + d - duplication code
+ctrl + y - delete line
+ctrl + / - oneline comment
+ctrl + shift + / - manyline comment

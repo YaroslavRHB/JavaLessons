@@ -1,0 +1,48 @@
+*** Declare two local variables myStr1 and myStr2 of String type and assign a value
+“Cartoon” for first string and ”Tomcat”
+   for second. Write code to display all of the letters, which are present in the
+   first word, but absent in the second.
+*** Вывести текст, составленный из последних букв всех слов.
+*** Дано слово, состоящее из четного числа букв. Вывести на экран его первую половину, не используя оператор цикла.
+*** Count chars of strings placed in the even positions in the given array. For example: array = {"Hello", "world", "from", "array"}
+the result will be 9: "Hello" length is 5 and "from" length is 4 "world" and "array" are skipped because they are on the odd positions.
+*** Implement method hasNoneLetters. Method returns true if none of the letters in the blacklist are present in the phrase.
+If at least one letter from blacklist is present in the phrase return false. Comparison should be case insensitive.
+Meaning 'A' ==
+*** Дано слово. Переставить первые три и последние три буквы, сохранив порядок их следования.
+*** Дана непустая строка S и целое число N (> 0). Вывести строку, содержащую символы строки S,
+между которыми вставлено по N символов
+«*» (звездочка).
+*** Преобразовать данный текст, заменив каждую строку вида переменная=переменная+1; на строку вида переменная++;
+а каждую строку вида
+переменная=переменная–1;на строку вида переменная–– .
+*** Certification
+*** Write a program that can swap first name with last name in the email (Saperated by an underscore).
+    If the email doesn't contain an underscore print the given input email.
+
+        Ex:
+            input: mike_tyson@gmail.com
+            output: tyson_mike@gmail.com
+
+*** Create a class called EmailTask2.
+       Assume that email address is constructed by person's first name and followed by an underscore and last name.
+
+       Write a program that will print out information about user based on email. Print first name, last name, and domain.
+
+       First and Last name should be printed with proper format - uppercase first letter and remaining lowercase.
+
+               Ex:
+                   input:
+                       craig_federighi@apple.com
+
+                Output:
+                    First name: Craig
+                    Last name: Federighi
+                    Domain: apple
+*** Write a function to convert a name into initials.
+    	This kata strictly takes two words with one space in between them.
+    	The output should be two capital letters with a dot separating them.
+    	It should look like this:
+    	Sam Harris => S.H
+    	patrick feeney => P.F
+

@@ -1,11 +1,11 @@
 git init - create a local repo
-git status - check the status of a local repo
+git status - check the status of the local repo
 git add file_name - add the file to the index
 git commit -m"message" - create a commit
 git log --graph - show all commits
 git checkout hash_sum_commit - switch to the commit with given check sum
-git push url_remote_repo_or_pseudonym branch_name - push to the remote repo
+git push url_remote_repo_or_pseudonym branch_name - push changes to the remote repo
 git remote add pseudonym url_remote_repo - create the pseudonym for the remote repo
 git remote -v - show all pseudonyms
 git clone url_remote_repo dir_name/ - cloning the remote repo
-git pull pseudonym branch_name - pull changes from the repo
+git pull pseudonym branch_name - pull changes from the remote repo

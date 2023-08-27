@@ -9,3 +9,13 @@ git remote add pseudonym url_remote_repo - create the pseudonym for the remote r
 git remote -v - show all pseudonyms
 git clone url_remote_repo dir_name/ - cloning the remote repo
 git pull pseudonym branch_name - pull changes from the remote repo
+
+git branch branch_name - create branch without move to it
+git checkout -b branch_name - create branch with move to it
+git branch - show all branches
+git merge branch_name - merge two branches
+
+git stash save "Message" - create stash
+git stash list - show all stashes
+git stash clear - delete all stashes
+git stash apply stash@{number} - apply stash

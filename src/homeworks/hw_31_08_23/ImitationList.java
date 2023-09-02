@@ -1,5 +1,7 @@
 package homeworks.hw_31_08_23;
 
+import java.util.Random;
+
 public class ImitationList {
     private int[] list;
 
@@ -22,7 +24,9 @@ public class ImitationList {
         resize();
 
         for (int i = 0; i < list.length; i++) {
+
             if (list[i] == 0) {
+
                 list[i] = value;
 
                 break;
@@ -92,11 +96,6 @@ public class ImitationList {
             temp[i - 1] = list[i];
 
         }
-
-        // int[] temp = new int[list.length - 1];
-        // System.arraycopy(list, 0, temp, 0, index);
-        // for (int i = index + 1; i < list.length ; i++) {
-        // temp[i-1] = list[i];
 
         list = temp;
     }
@@ -216,10 +215,105 @@ public class ImitationList {
         }
     }
 
+    public void addArray(ImitationList concatArray) {
+
+        int count = 0;
+
+        for (int i = 0; i < list.length; i++) {
+
+            if (list[i] != 0) {
+
+                count++;
+            }
+        }
+
+        int[] temp = new int[count + concatArray.list.length];
+
+        for (int i = 0; i < count; i++) {
+
+            temp[i] = list[i];
+
+        }
+
+        for (int i = 0; i < concatArray.list.length; i++) {
+
+            temp[count + i] = concatArray.list[i];
+
+        }
+
+        list = temp;
+    }
+
+    public void removeDuplicates() {
+
+        ImitationList temp = new ImitationList(list.length);
+
+        temp.list = list;
+
+        boolean isClean = false;
+
+        while (!isClean) {
+
+            isClean = true;
+
+            for (int i = 0; i < temp.list.length; i++) {
+
+                int num = temp.list[i];
+
+                for (int j = 0; j < temp.list.length; j++) {
+
+                    if (i != j) {
+
+                        if (num == temp.list[j]) {
+
+                            temp.deleteElementByIndex(j);
+
+                            isClean = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        temp.deleteElementByIndex(temp.list.length - 1);
+
+        list = temp.list;
+    }
+
+    public void searchFirstEntry(int value) {
+
+        for (int i = 0; i < list.length; i++) {
+
+            if (value == list[i]) {
+
+                System.out.println("The first entry is: " + i);
+
+                break;
+            }
+        }
+    }
+
+    public void shuffleElements() {
+
+        Random random = new Random();
+
+        for (int i = 0; i < list.length; i++) {
+
+            int index = random.nextInt(i + 1);
+
+            int num = list[index];
+
+            list[index] = list[i];
+
+            list[i] = num;
+        }
+    }
+
+
     public String toString() {
 
         for (int j : list) {
-            System.out.println(j);
+            System.out.print(j + " ");
         }
         return "OK";
     }

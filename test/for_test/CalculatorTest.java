@@ -2,28 +2,32 @@ package for_test;
 
 import lessons.for_test.Calculator;
 import org.junit.*;
+import org.junit.contrib.java.lang.system.SystemOutRule;
 
 public class CalculatorTest {
 
     @BeforeClass
     public static void beforeAllTests() {
-        System.out.println("Before all tests");
+        //     System.out.println("Before all tests");
     }
 
     @AfterClass
     public static void afterAllTests() {
-        System.out.println("After all tests");
+        //     System.out.println("After all tests");
     }
 
     @Before
     public void beforeEachTest() {
-        System.out.println("Before each test");
+        //     System.out.println("Before each test");
     }
 
     @After
     public void afterEachTest() {
-        System.out.println("After each test");
+        //     System.out.println("After each test");
     }
+
+    @Rule
+    public SystemOutRule outRule = new SystemOutRule().enableLog();
 
     @Test
     public void shouldReturnSumOfValues() {
@@ -65,9 +69,19 @@ public class CalculatorTest {
     public void shouldReturnQuotientOfValues() {
         Calculator calculator = new Calculator();
 
-        double quotient = calculator.quotient(4, 5);
+        double quotient = calculator.quotient(10, 5);
 
-        Assert.assertEquals(0.8, quotient, -1); // ???
+        Assert.assertEquals(2.0, quotient, -1); // ???
     }
 
+    @Test
+    public void shouldTestConsole() {
+        Calculator calculator = new Calculator();
+
+        calculator.print();
+
+        String log = outRule.getLog();
+
+        Assert.assertTrue(log.contains("Hello"));
+    }
 }

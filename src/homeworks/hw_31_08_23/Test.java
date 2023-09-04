@@ -4,7 +4,7 @@ public class Test {
     public static void main(String[] args) {
 
         ImitationList list = new ImitationList(10);
-        int [] array = {5,4,6,8};
+        int[] array = {5, 4, 6, 8};
 
         list.addElement(5);
         list.addElement(4);
@@ -15,7 +15,7 @@ public class Test {
         list.addElement(3);
         list.addElement(9);
 
-        list.changeElementByIndex(4,5);
+        list.changeElementByIndex(4, 5);
         list.showInfo();
 
         list.deleteElementByIndex(4);
@@ -50,5 +50,5 @@ public class Test {
 
         list.shuffleElements();
         list.showInfo();
-        }
     }
+}

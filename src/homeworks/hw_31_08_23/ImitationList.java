@@ -10,6 +10,14 @@ public class ImitationList {
         list = new int[size];
     }
 
+    public int[] getList() {
+        return list;
+    }
+
+    public void setList(int[] list) {
+        this.list = list;
+    }
+
     public void addElement(int value) {
 
         if (value == 0) {
@@ -142,8 +150,8 @@ public class ImitationList {
 
     public void outputInOrder() {
 
-        for (int i = 0; i < list.length; i++) {
-            System.out.print(list[i]+" ");
+        for (int j : list) {
+            System.out.print(j + " ");
         }
         System.out.println();
     }
@@ -171,8 +179,8 @@ public class ImitationList {
 
         int count = 0;
 
-        for (int i = 0; i < list.length; i++) {
-            if (list[i] != 0) {
+        for (int j : list) {
+            if (j != 0) {
                 count++;
             }
         }
@@ -202,7 +210,6 @@ public class ImitationList {
         }
     }
 
-
     public void searchFirstEntry(int value) {
         for (int i = 0; i < list.length; i++) {
             if (value == list[i]) {
@@ -229,7 +236,7 @@ public class ImitationList {
         StringBuilder sb = new StringBuilder();
 
         for (int j : list) {
-            sb.append(Integer.parseInt(String.valueOf(j))).append(" ");
+            sb.append(j).append(" ");
         }
         System.out.println(sb);
 

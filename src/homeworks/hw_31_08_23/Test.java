@@ -1,16 +1,10 @@
 package homeworks.hw_31_08_23;
 
-import java.lang.reflect.Array;
-
 public class Test {
     public static void main(String[] args) {
+
         ImitationList list = new ImitationList(10);
-        ImitationList list2 = new ImitationList(3);
-
-        list2.addElement(3);
-        list2.addElement(4);
-        list2.addElement(5);
-
+        int [] array = {5,4,6,8};
 
         list.addElement(5);
         list.addElement(4);
@@ -21,13 +15,40 @@ public class Test {
         list.addElement(3);
         list.addElement(9);
 
+        list.changeElementByIndex(4,5);
+        list.showInfo();
+
+        list.deleteElementByIndex(4);
+        list.showInfo();
+
+        list.increaseByIndex(5);
+        list.showInfo();
+
+        list.decreaseByIndex(5);
+        list.showInfo();
+
+        list.increaseToFixedSize(20);
+        list.showInfo();
+
+        list.decreaseToFixedSize(10);
+        list.showInfo();
+
+        list.outputInOrder();
+        list.showInfo();
+
+        list.sortBubble();
+        list.showInfo();
+
+        list.addArray(array);
+        list.showInfo();
+
+        list.removeDuplicates();
+        list.showInfo();
+
+        list.searchFirstEntry(4);
+        list.showInfo();
+
         list.shuffleElements();
-
-        list.toString();
-
-
-
-
-
+        list.showInfo();
         }
     }

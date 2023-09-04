@@ -8,29 +8,21 @@ public class ImitationList {
     public ImitationList(int size) {
 
         list = new int[size];
-
     }
 
     public void addElement(int value) {
 
         if (value == 0) {
-
             System.out.println("Zero not allowed");
-
             return;
-
         }
 
         resize();
 
         for (int i = 0; i < list.length; i++) {
-
             if (list[i] == 0) {
-
                 list[i] = value;
-
                 break;
-
             }
         }
     }
@@ -38,11 +30,9 @@ public class ImitationList {
     private void resize() {
 
         if (list[list.length - 1] != 0) {
-
             int[] temp = new int[list.length * 2];
 
             for (int i = 0; i < list.length; i++) {
-
                 temp[i] = list[i];
             }
 
@@ -54,144 +44,111 @@ public class ImitationList {
     public void changeElementByIndex(int index, int value) {
 
         if (index < 0 || index > list.length - 1) {
-
             System.out.println("Incorrect index");
-
             return;
-
         }
 
         if (value == 0) {
-
             System.out.println("Zero not allowed");
-
             return;
-
         }
 
         list[index] = value;
-
     }
 
     public void deleteElementByIndex(int index) {
 
         if (index < 0 || index > list.length - 1) {
-
             System.out.println("Incorrect index");
-
             return;
-
         }
 
         int[] temp = new int[list.length - 1];
 
         for (int i = 0; i < index; i++) {
-
             temp[i] = list[i];
-
         }
 
         for (int i = index + 1; i < list.length; i++) {
-
             temp[i - 1] = list[i];
-
         }
 
         list = temp;
     }
 
-    public void increaseDecreaseListByIndex(int index) {
+    public void increaseByIndex(int index) {
 
-        if (list.length + index <= 0) {
-
+        if (index <= 0) {
             System.out.println("Incorrect index");
-
             return;
         }
 
         int[] temp = new int[list.length + index];
 
-        if (index > 0) {
-
-            for (int i = 0; i < list.length; i++) {
-
-                temp[i] = list[i];
-
-            }
-        }
-
-        if (index < 0) {
-
-            for (int i = 0; i < temp.length; i++) {
-
-                temp[i] = list[i];
-
-            }
+        for (int i = 0; i < list.length; i++) {
+            temp[i] = list[i];
         }
 
         list = temp;
     }
 
-    public void changeListToFixedSize(int index) {
+    public void decreaseByIndex(int index) {
+
+        if (index <= 0 || index >= list.length) {
+            System.out.println("Incorrect index");
+            return;
+        }
+
+        int[] temp = new int[list.length - index];
+
+        for (int i = 0; i < temp.length; i++) {
+            temp[i] = list[i];
+        }
+
+        list = temp;
+    }
+
+    public void increaseToFixedSize(int index) {
 
         if (index <= 0) {
-
             System.out.println("Incorrect index");
-
             return;
         }
 
         int[] temp = new int[index];
 
-        if (temp.length > list.length) {
-
-            for (int i = 0; i < list.length; i++) {
-
-                temp[i] = list[i];
-
-            }
-        }
-
-        if (temp.length < list.length) {
-
-            for (int i = 0; i < temp.length; i++) {
-
-                temp[i] = list[i];
-
-            }
+        for (int i = 0; i < list.length; i++) {
+            temp[i] = list[i];
         }
 
         list = temp;
     }
 
-    public void outputInOrder(int index) {
+    public void decreaseToFixedSize(int index) {
 
-        if (index != 0 && index != 1) {
-
-            System.out.println("Index should be 1 or 0");
-
+        if (index <= 0) {
+            System.out.println("Incorrect index");
             return;
         }
 
-        if (index == 0) {
+        int[] temp = new int[index];
 
-            for (int i = 0; i < list.length; i++) {
-
-                System.out.println(list[i]);
-
-            }
+        for (int i = 0; i < temp.length; i++) {
+            temp[i] = list[i];
         }
 
-        if (index == 1) {
-
-            for (int i = list.length - 1; i >= 0; i--) {
-
-                System.out.println(list[i]);
-            }
-        }
+        list = temp;
     }
 
-    public void sortBubbleList() {
+    public void outputInOrder() {
+
+        for (int i = 0; i < list.length; i++) {
+            System.out.print(list[i]+" ");
+        }
+        System.out.println();
+    }
+
+    public void sortBubble() {
 
         boolean isSorted = false;
 
@@ -200,45 +157,34 @@ public class ImitationList {
             isSorted = true;
 
             for (int i = 1; i < list.length; i++) {
-
                 if (list[i] < list[i - 1]) {
-
                     int temp = list[i];
-
                     list[i] = list[i - 1];
-
                     list[i - 1] = temp;
-
                     isSorted = false;
                 }
             }
         }
     }
 
-    public void addArray(ImitationList concatArray) {
+    public void addArray(int[] array) {
 
         int count = 0;
 
         for (int i = 0; i < list.length; i++) {
-
             if (list[i] != 0) {
-
                 count++;
             }
         }
 
-        int[] temp = new int[count + concatArray.list.length];
+        int[] temp = new int[count + array.length];
 
         for (int i = 0; i < count; i++) {
-
             temp[i] = list[i];
-
         }
 
-        for (int i = 0; i < concatArray.list.length; i++) {
-
-            temp[count + i] = concatArray.list[i];
-
+        for (int i = 0; i < array.length; i++) {
+            temp[count + i] = array[i];
         }
 
         list = temp;
@@ -246,48 +192,21 @@ public class ImitationList {
 
     public void removeDuplicates() {
 
-        ImitationList temp = new ImitationList(list.length);
-
-        temp.list = list;
-
-        boolean isClean = false;
-
-        while (!isClean) {
-
-            isClean = true;
-
-            for (int i = 0; i < temp.list.length; i++) {
-
-                int num = temp.list[i];
-
-                for (int j = 0; j < temp.list.length; j++) {
-
-                    if (i != j) {
-
-                        if (num == temp.list[j]) {
-
-                            temp.deleteElementByIndex(j);
-
-                            isClean = false;
-                        }
-                    }
+        for (int i = 0; i < list.length; i++) {
+            for (int j = i + 1; j < list.length; j++) {
+                if (list[i] == list[j]) {
+                    deleteElementByIndex(i);
+                    j--;
                 }
             }
         }
-
-        temp.deleteElementByIndex(temp.list.length - 1);
-
-        list = temp.list;
     }
 
+
     public void searchFirstEntry(int value) {
-
         for (int i = 0; i < list.length; i++) {
-
             if (value == list[i]) {
-
                 System.out.println("The first entry is: " + i);
-
                 break;
             }
         }
@@ -297,24 +216,22 @@ public class ImitationList {
 
         Random random = new Random();
 
-        for (int i = 0; i < list.length; i++) {
-
-            int index = random.nextInt(i + 1);
-
-            int num = list[index];
-
-            list[index] = list[i];
-
-            list[i] = num;
+        for (int i = list.length - 1; i > 1; i--) {
+            int j = random.nextInt(i);
+            int temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
         }
     }
 
+    public void showInfo() {
 
-    public String toString() {
+        StringBuilder sb = new StringBuilder();
 
-        for (int j : list) {
-            System.out.print(j + " ");
+        for (int i = 0; i < list.length; i++) {
+            sb.append(Integer.parseInt(String.valueOf(list[i])) + " ");
         }
-        return "OK";
+        System.out.println(sb.toString());
+
     }
 }

@@ -228,10 +228,10 @@ public class ImitationList {
 
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < list.length; i++) {
-            sb.append(Integer.parseInt(String.valueOf(list[i])) + " ");
+        for (int j : list) {
+            sb.append(Integer.parseInt(String.valueOf(j))).append(" ");
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
 
     }
 }

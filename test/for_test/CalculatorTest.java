@@ -18,7 +18,7 @@ public class CalculatorTest {
 
     @Before
     public void beforeEachTest() {
-        //     System.out.println("Before each test");
+        // System.out.println("Before each tests");
     }
 
     @After

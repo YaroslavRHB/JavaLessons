@@ -151,7 +151,7 @@ public class ImitationList {
     public void outputInOrder() {
 
         for (int j : list) {
-            System.out.print(j + " ");
+            System.out.print(j + "\t");
         }
         System.out.println();
     }
@@ -182,6 +182,13 @@ public class ImitationList {
         for (int j : list) {
             if (j != 0) {
                 count++;
+            }
+        }
+
+        if(list.length-count>= array.length){
+            for (int i = count; i < list.length && i< array.length; i++) {
+                list[i]=array[i-count];
+                break;
             }
         }
 

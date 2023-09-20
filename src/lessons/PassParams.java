@@ -12,13 +12,21 @@ public class PassParams {
 
         String v = "Hello";
 
-        print3(v);
+        print3(v);//copy of reference
 
         System.out.println(v);
 
 //        final char[] chars = {'H', 'e'};
 
 //        chars = null;
+
+        Man man = new Man();
+
+        man.name = "John";
+
+        print4(man);//copy of reference
+
+        System.out.println(man.name);
     }
 
     public static void print1(int b) {
@@ -29,8 +37,8 @@ public class PassParams {
         a = "World";
     }
 
-    public static void print4(String a) {
-        a = "World";
+    public static void print4(Man man) {
+        man.name = "World";
     }
 
     public static int print2() {

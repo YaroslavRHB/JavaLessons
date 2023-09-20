@@ -5,6 +5,10 @@ public class LearnEnum {
 
         Country uk = Country.UK;
 
+        Country uk1 = Country.UK;
+
+        System.out.println(uk == uk1);
+
         int ordinal = uk.ordinal();
 
         String tempCountry = "Usa";

@@ -4,16 +4,15 @@ public class Test {
     public static void main(String[] args) {
 
         ImitationList list = new ImitationList(10);
-        int[] array = {5, 4, 6, 8};
+        int[] array = {5, 4, 6, 8, 9, 9};
 
         list.addElement(5);
         list.addElement(4);
         list.addElement(1);
         list.addElement(3);
         list.addElement(8);
-        list.addElement(5);
-        list.addElement(3);
-        list.addElement(9);
+        list.addElement(4);
+
 
         list.changeElementByIndex(4, 5);
         list.showInfo();

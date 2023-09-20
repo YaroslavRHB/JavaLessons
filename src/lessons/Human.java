@@ -70,5 +70,9 @@ class TestHuman {
 
         b = b;
 
+        Human ben = null;
+
+        ben.getAge();
+
     }
 }

@@ -15,11 +15,24 @@ public class Flight {
         this.availableSeats = availableSeats;
     }
     public void view (){
-        System.out.println("Flight Number: " + flightNumber + "\n From: " + cityDeparture+ "\n To: "+ cityArrival+
+        System.out.println("Flight Number: " + flightNumber + "\nFrom: " + cityDeparture+ "\nTo: "+ cityArrival+
                 "\nFlight time is: "+ flightTime+ "\nAvailable seats: "+availableSeats );
+        System.out.println();
     }
 
     public Cities getCityArrival() {
         return cityArrival;
+    }
+    public Cities getCityDeparture() {
+        return cityDeparture;
+    }
+    public int getFlightNumber() {
+        return flightNumber;
+    }
+    public int getFlightTime() {
+        return flightTime;
+    }
+    public int getAvailableSeats() {
+        return availableSeats;
     }
 }

@@ -51,8 +51,8 @@ public class Motorcycle {
         setColor(color);
     }
 
-    public void addMileage(int mileage){
-        setMileage(mileage+getMileage());
+    public void addMileage(int mileage) {
+        setMileage(mileage + getMileage());
     }
 
     public void view() {

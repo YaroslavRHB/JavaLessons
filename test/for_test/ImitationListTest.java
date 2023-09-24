@@ -1,6 +1,6 @@
 package for_test;
 
-import homeworks.hw_31_08_23.ImitationList;
+import homeworks.august.hw_31_08_23.ImitationList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

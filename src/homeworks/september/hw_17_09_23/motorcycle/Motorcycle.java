@@ -57,7 +57,7 @@ public class Motorcycle {
 
     public void view() {
         System.out.println(
-                "\nModel: " + name +
+                        "\nModel: " + name +
                         "\nYear: " + yearOfProduction +
                         "\nPrice: " + price +
                         "\nWeight: " + weight +

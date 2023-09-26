@@ -11,7 +11,7 @@ public class FlightService {
 
     public void addFlight(Flight flight) {
         for (int i = 0; i < flights.length; i++) {
-            if (Objects.isNull(flights[i])) {
+            if (Objects.nonNull(flights[i])) {
                 flights[i] = flight;
                 break;
             }

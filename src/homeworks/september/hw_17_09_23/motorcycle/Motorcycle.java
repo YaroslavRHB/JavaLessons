@@ -43,8 +43,9 @@ public class Motorcycle {
     }
 
     public void toBreak() {
-        if (getMileage() > 200000)
-            setReadyToDrive(false);
+        if (getMileage() > 200000) {
+            readyToDrive = false;
+        }
     }
 
     public void Colorize(Color color) {

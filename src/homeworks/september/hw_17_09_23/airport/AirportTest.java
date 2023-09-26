@@ -26,9 +26,9 @@ public class AirportTest {
         flightService.addFlight(f4);
 
         flightService.searchByCityArrival(Cities.PARIS);
-        flightService.searchByCityDeparture(Cities.NEW_YORK);
+        /*flightService.searchByCityDeparture(Cities.NEW_YORK);
         flightService.showAllFlight();
         flightService.showFlightByNumber(345);
-        flightService.smartSearch(Cities.NEW_YORK, Cities.DUBLIN, 3467, 680, 23);
+        flightService.smartSearch(Cities.NEW_YORK, Cities.DUBLIN, 3467, 680, 23);*/
     }
 }
